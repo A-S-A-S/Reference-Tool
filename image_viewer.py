@@ -117,3 +117,10 @@ class ImageViewer(ctk.CTkFrame):
                 raise ValueError("Delay must be positive")
         except ValueError:
             print("Invalid delay value. Please enter a positive integer.")
+
+    # Closure
+    def cancel_scheduled_tasks(self):
+            if self.timer_id:
+                self.after_cancel(self.timer_id)
+            if hasattr(self, '_resize_timer'):
+                self.after_cancel(self._resize_timer)

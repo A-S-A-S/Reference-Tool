@@ -16,7 +16,6 @@ class ImageDownloader(ctk.CTkFrame):
 
         self.url_entry = ctk.CTkEntry(self, placeholder_text="Enter URL here")
         self.url_entry.grid(row=0, column=1, padx=20, pady=(20, 10), sticky="ew")
-        #self.url_entry.insert(0, "https://pt.pinterest.com/avgustcunningham/scenery/")
 
         # Folder
         self.folder_label = ctk.CTkLabel(self, text="Folder to download:")
